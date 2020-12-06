@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo 'Compute node:' `hostname`
+echo 'Start time:' `date +'%Y-%m-%d %T'`
+
+/sfs/lustre/bahamut/scratch/tld9kg/region2vec-master/Main.py --window 5 --size 200  | tee ./output_dir/submission/region2vec_pipeline_"model_16".log

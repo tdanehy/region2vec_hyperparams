@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo 'Compute node:' `hostname`
+echo 'Start time:' `date +'%Y-%m-%d %T'`
+
+ | tee ./output_dir/submission/region2vec_pipeline_5.log

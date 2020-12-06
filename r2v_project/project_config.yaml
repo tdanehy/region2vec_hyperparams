@@ -1,0 +1,7 @@
+pep_version: 2.0.0
+sample_table: './sample_table.csv'
+looper:
+  output_dir: './output_dir'
+sample_modifiers:
+  append:
+    pipeline_interfaces: './pipeline_interface.yaml'

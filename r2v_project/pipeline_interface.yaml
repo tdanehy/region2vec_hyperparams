@@ -1,0 +1,8 @@
+pipeline_name: region2vec_pipeline
+pipeline_type: sample
+var_templates:
+  path: '{looper.piface_dir}/Main.py'
+command_template: >
+  {pipeline.var_templates.path}
+  --window {sample.window}
+  --size {sample.size}

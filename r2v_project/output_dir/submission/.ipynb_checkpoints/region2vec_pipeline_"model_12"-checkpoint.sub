@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH --job-name='region2vec_pipeline_"model_12"'
+#SBATCH --output='./output_dir/submission/region2vec_pipeline_"model_12".log'
+#SBATCH --mem='8000'
+#SBATCH --cpus-per-task='4'
+#SBATCH --time='00-06:00:00'
+#SBATCH --partition='standard'
+#SBATCH -m block
+#SBATCH --ntasks=1
+#SBATCH --open-mode=append
+
+echo 'Compute node:' `hostname`
+echo 'Start time:' `date +'%Y-%m-%d %T'`
+
+cmd="/sfs/lustre/bahamut/scratch/tld9kg/region2vec-master/Main.py --window 15 --size 100 "
+
+y=`echo "$cmd" | sed -e 's/^/srun /'`
+eval "$y"
+
